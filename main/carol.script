@@ -1,0 +1,28 @@
+trk = require("main.tracking")
+
+function init(self)
+	trk.track("carol")
+	trk.dump()
+	msg.post(".", "acquire_input_focus")
+end
+
+function final(self)
+	trk.untrack()
+	trk.dump()
+	trk.reset()
+	trk.dump()
+end
+
+function on_input(self, action_id, action)
+	if action.pressed then
+		local all = trk.get()
+		for id in pairs(all) do
+			print(id, go.get_position(id))
+		end
+		print()
+		for id in pairs(trk.get("carol")) do
+			print(id, go.get_position(id))
+		end
+		print()
+	end
+end

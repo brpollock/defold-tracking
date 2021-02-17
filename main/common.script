@@ -1,0 +1,12 @@
+trk = require("main.tracking")
+
+function init(self)
+	trk.track()
+	trk.dump()
+end
+
+function final(self)
+	trk.untrack()
+	trk.dump()
+end
+
