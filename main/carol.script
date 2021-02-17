@@ -1,4 +1,4 @@
-trk = require("main.tracking")
+trk = require("tracking.tracking")
 
 function init(self)
 	trk.track("carol")

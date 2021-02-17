@@ -1,4 +1,6 @@
--- Keep track of instance ids
+-- Keep track of Defold object IDs
+-- https://bitbucket.org/brpollock/deftracking/
+
 local M = {}
 
 local ids = {}
@@ -52,7 +54,7 @@ function M.untrack()
 	-- Its ID is removed from both the main tracking list
 	-- and (if necessary) from its class's tracking list.
 	local caller_id = go.get_id()
-	cla = ids[caller_id]
+	local cla = ids[caller_id]
 	ids[caller_id] = nil
 	if classes[cla] then
 		classes[cla][caller_id] = nil
