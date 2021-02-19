@@ -12,7 +12,7 @@ height = 640
 input_method = HiddenInputField
 
 [project]
-title = deftracking
+title = defold-tracking
 
 [library]
 include_dirs = tracking
