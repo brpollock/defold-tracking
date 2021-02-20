@@ -4,6 +4,13 @@ This module keeps track of active game objects.
 
 This allows you to iterate over all objects, or subsets.
 
+## To use this library
+
+1. Add this url to `Assets->game.project->Dependencies`
+
+    - `https://github.com/brpollock/defold-tracking/archive/master.zip`
+
+2. Then select `Project->Fetch Libraries`
 
 ## To track an object
 
